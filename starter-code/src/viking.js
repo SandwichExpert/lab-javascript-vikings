@@ -60,6 +60,7 @@ class War {
         this.vikingArmy = [];
         this.saxonArmy = [];
     }
+
     addViking(viking){
         this.vikingArmy.push(viking);
     }
@@ -110,12 +111,31 @@ class War {
     
     }
     // }
-
+    
     }
 
-// const torbjorn = new Viking('Torbjörn', 75, 200 );
-
-
-
+const torbjorn = new Viking('Torbjörn', 75, 200 );
+const war = new War()
+war.addViking(torbjorn);
+const saxon = new Saxon(50,50);
+war.addSaxon(saxon);
+console.log(war.vikingArmy);
+console.log(war.saxonArmy);
+war.vikingAttack();
+console.log(war.saxonArmy, "attacked");
+console.log(war.showStatus())
+const saxon1 = new Saxon(75,50);
+const saxon2 = new Saxon(85,50);
+const saxon3 = new Saxon(75,80);
+war.addSaxon(saxon1);
+war.addSaxon(saxon2);
+war.addSaxon(saxon3);
+console.log(war.saxonArmy);
+war.saxonAttack();
+console.log(war.vikingArmy);
+war.vikingAttack();
+war.vikingAttack();
+war.vikingAttack();
+console.log(war.saxonArmy);
 
 
